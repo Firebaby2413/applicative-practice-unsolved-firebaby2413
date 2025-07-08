@@ -6,6 +6,13 @@ import { data } from "../data/data";
 
 export function getPlanetsNamesWithMoons(data) {
   // Your code goes here...
+  const planetNamesWithMoons = [];
+  data.planets.map(function(planet) {
+    if (planet.moons) {
+      return planetNamesWithMoons.push(planet.name)
+    }
+  });
+  return planetNamesWithMoons;
 }
 
 
